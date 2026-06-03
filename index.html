@@ -584,7 +584,7 @@
 
   <div class="timeline">
     <div class="tl-item reveal">
-      <div class="tl-time-col"><div class="tl-time">16:00</div></div>
+      <div class="tl-time-col"><div class="tl-time">14:50</div></div>
       <div class="tl-dot"></div>
       <div class="tl-content">
         <div class="tl-title">Сбор гостей & Welcome</div>
@@ -592,7 +592,7 @@
       </div>
     </div>
     <div class="tl-item reveal">
-      <div class="tl-time-col"><div class="tl-time">17:00</div></div>
+      <div class="tl-time-col"><div class="tl-time">15:00</div></div>
       <div class="tl-dot"></div>
       <div class="tl-content">
         <div class="tl-title">Выездная регистрация</div>
@@ -600,7 +600,15 @@
       </div>
     </div>
     <div class="tl-item reveal">
-      <div class="tl-time-col"><div class="tl-time">18:00</div></div>
+      <div class="tl-time-col"><div class="tl-time">15:30</div></div>
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <div class="tl-title">Фуршет & Фотосессия</div>
+        <div class="tl-desc">Лёгкие закуски, шампанское и совместные фотографии на память.</div>
+      </div>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-time-col"><div class="tl-time">16:00</div></div>
       <div class="tl-dot"></div>
       <div class="tl-content">
         <div class="tl-title">Свадебный банкет</div>
@@ -614,12 +622,14 @@
   <div class="section-tag">Локация</div>
   <h2>Место проведения</h2>
   <div class="ymap-wrap reveal">
-    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A670a466c42a2f89f257bf8546b142468f766e077a2846d0a7a3b3fb34e1cba56&amp;source=constructor" width="100%" height="400"></iframe>
+    <iframe
+      src="https://yandex.ru/map-widget/v1/?ll=41.324542%2C54.950464&z=16&pt=41.324542%2C54.950464%2Cpm2rdm"
+      width="100%" height="300" frameborder="0"></iframe>
   </div>
   <div class="address-block reveal">
-    <strong>Загородная резиденция «Лесное Поместье»</strong><br>
-    Элитный зал торжеств, ул. Лесная, д. 24<br>
-    <a href="https://maps.yandex.ru" target="_blank">Построить маршрут на картах →</a>
+    <strong>Ресторан «ЧИНАР»</strong><br>
+    Касимовский район, д. Лощинино, ул. Малый переулок, д.7<br><br>
+    <a href="https://yandex.ru/maps/?rtext=~54.950464,41.324542&rtt=auto" target="_blank">Построить маршрут на Яндекс.Картах →</a>
   </div>
 </section>
 
@@ -704,7 +714,8 @@
   window.addEventListener('scroll', revealOnScroll);
   window.addEventListener('load', revealOnScroll);
 
-  const targetDate = new Date('August 8, 2026 16:00:00').getTime();
+  // Сбор гостей 14:50 = 08.08.2026 14:50:00
+  const targetDate = new Date('August 8, 2026 14:50:00').getTime();
   function updateTimer() {
     const diff = targetDate - Date.now();
     if (diff > 0) {
