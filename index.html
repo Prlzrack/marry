@@ -7,11 +7,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg-deep-black: #070908;   /* Глубокий премиальный черный */
-    --bg-card-dark: #111613;    /* Темно-зеленый графит для блоков */
-    --emerald-green: #0a2f1d;   /* Праздничный глубокий изумруд */
+    --bg-deep-black: #070908;
+    --bg-card-dark: #111613;
+    --emerald-green: #0a2f1d;
     --gold-linear: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
-    --gold-solid: #d4af37;      /* Насыщенное золото */
+    --gold-solid: #d4af37;
     --gold-light: #f3e5ab;
     --text-white: #ffffff;
     --text-dim: #b2c4bb;
@@ -29,10 +29,8 @@
     font-weight: 300;
     overflow-x: hidden;
     line-height: 1.6;
-    position: relative;
   }
 
-  /* Контейнер для праздничного конфетти */
   #confetti-container {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -54,16 +52,16 @@
     100% { transform: translateY(105vh) rotate(720deg); opacity: 0; }
   }
 
-  /* Фиксированное меню */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 100;
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    padding: 1.2rem;
-    background: rgba(7, 9, 8, 0.9);
+    flex-wrap: wrap;
+    gap: 0.4rem 1.2rem;
+    padding: 0.9rem 1rem;
+    background: rgba(7, 9, 8, 0.95);
     backdrop-filter: blur(15px);
     border-bottom: 1px solid var(--border-dark);
     transform: translateY(-100%);
@@ -71,16 +69,17 @@
   }
   nav.visible { transform: translateY(0); }
   nav a {
-    font-size: 0.75rem;
-    letter-spacing: 0.2em;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
     text-decoration: none;
     color: var(--text-dim);
     transition: color 0.3s;
+    white-space: nowrap;
   }
   nav a:hover { color: var(--gold-solid); }
 
-  /* Главный экран в стиле люкс */
+  /* HERO */
   #hero {
     min-height: 100vh;
     display: flex;
@@ -88,37 +87,36 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 2rem;
+    padding: 3rem 1.5rem 5rem;
     position: relative;
     background: radial-gradient(circle at center, var(--emerald-green) 0%, var(--bg-deep-black) 70%);
   }
 
-  /* Двойная праздничная рамка */
   .hero-frame {
     position: absolute;
-    top: 30px; bottom: 30px; left: 30px; right: 30px;
+    top: 20px; bottom: 20px; left: 20px; right: 20px;
     border: 1px solid var(--border-gold);
     pointer-events: none;
   }
   .hero-frame::after {
     content: '';
     position: absolute;
-    top: 10px; bottom: 10px; left: 10px; right: 10px;
-    border: 1px solid rgba(255,255,255,0.05);
+    top: 8px; bottom: 8px; left: 8px; right: 8px;
+    border: 1px solid rgba(255,255,255,0.04);
   }
 
   .hero-tag {
-    font-size: 0.8rem;
-    letter-spacing: 0.4em;
+    font-size: 0.75rem;
+    letter-spacing: 0.35em;
     text-transform: uppercase;
     color: var(--gold-solid);
-    margin-bottom: 2rem;
+    margin-bottom: 1.8rem;
     font-weight: 400;
   }
 
   h1.names {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(3.5rem, 9vw, 6.5rem);
+    font-size: clamp(3rem, 12vw, 6.5rem);
     font-weight: 400;
     line-height: 1.1;
     text-transform: uppercase;
@@ -128,43 +126,42 @@
     -webkit-text-fill-color: transparent;
     color: var(--gold-solid);
   }
-  
+
   .ampersand {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-size: clamp(2rem, 8vw, 4rem);
     display: block;
-    margin: 0.5rem 0;
-    text-transform: lowercase;
+    margin: 0.4rem 0;
     -webkit-text-fill-color: initial;
     color: var(--text-white);
   }
 
   .hero-date {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(1.6rem, 4vw, 2.5rem);
+    font-size: clamp(1.3rem, 5vw, 2.2rem);
     color: var(--text-white);
     letter-spacing: 0.2em;
-    margin-top: 2rem;
+    margin-top: 1.8rem;
     border-top: 1px solid var(--border-gold);
     border-bottom: 1px solid var(--border-gold);
-    padding: 0.4rem 2rem;
+    padding: 0.4rem 1.5rem;
     display: inline-block;
   }
 
   .hero-sub {
-    font-size: 1rem;
-    letter-spacing: 0.15em;
+    font-size: 0.95rem;
+    letter-spacing: 0.12em;
     color: var(--text-dim);
-    margin-top: 2rem;
+    margin-top: 1.8rem;
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
   }
 
   .scroll-hint {
     position: absolute;
-    bottom: 4.5rem;
-    font-size: 0.7rem;
+    bottom: 3.5rem;
+    font-size: 0.65rem;
     letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--gold-solid);
@@ -175,27 +172,25 @@
     50% { opacity: 1; }
   }
 
-  /* Таймер отсчета праздника */
+  /* COUNTDOWN */
   #countdown {
     background: var(--bg-deep-black);
-    padding: 6rem 2rem 4rem 2rem;
+    padding: 5rem 1.5rem 4rem;
     text-align: center;
-    position: relative;
   }
   .countdown-label {
-    font-size: 0.8rem;
-    letter-spacing: 0.3em;
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
     color: var(--text-dim);
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
   }
   .countdown-grid {
     display: flex;
-    gap: 1.5rem;
+    gap: 0.8rem;
     justify-content: center;
     align-items: center;
-    max-width: 650px;
-    margin: 0 auto;
+    flex-wrap: nowrap;
   }
   .cd-unit {
     display: flex;
@@ -203,41 +198,44 @@
     align-items: center;
     background: var(--bg-card-dark);
     border: 1px solid var(--border-dark);
-    padding: 1.5rem;
-    width: 110px;
+    padding: 1rem 0.8rem;
+    min-width: 0;
+    flex: 1;
+    max-width: 100px;
     border-bottom: 2px solid var(--gold-solid);
   }
   .cd-num {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    font-size: clamp(2rem, 7vw, 3.5rem);
     font-weight: 300;
     line-height: 1;
     color: var(--text-white);
   }
   .cd-lbl {
-    font-size: 0.65rem;
-    letter-spacing: 0.15em;
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--gold-solid);
-    margin-top: 0.6rem;
+    margin-top: 0.5rem;
   }
   .cd-sep {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--gold-solid);
+    flex-shrink: 0;
   }
 
-  /* Общие стили секций */
+  /* SECTIONS */
   section {
-    padding: 7rem 2rem;
+    padding: 5rem 1.5rem;
     max-width: 950px;
     margin: 0 auto;
     position: relative;
   }
 
   .section-tag {
-    font-size: 0.75rem;
-    letter-spacing: 0.4em;
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
     text-transform: uppercase;
     color: var(--gold-solid);
     margin-bottom: 1rem;
@@ -247,35 +245,34 @@
 
   h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-size: clamp(2rem, 7vw, 3.5rem);
     font-weight: 400;
     color: var(--text-white);
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.08em;
   }
 
   p.lead {
-    font-size: 1rem;
-    line-height: 1.8;
+    font-size: 0.95rem;
+    line-height: 1.85;
     color: var(--text-dim);
     text-align: center;
     max-width: 680px;
-    margin: 0 auto 4rem auto;
+    margin: 0 auto 3rem auto;
   }
 
-  /* Наша история и Фоторамка */
+  /* STORY */
   #story { background: var(--bg-deep-black); }
-  
+
   .story-photo-wrap {
-    margin: 3rem auto;
-    max-width: 520px;
+    margin: 2.5rem auto;
+    max-width: 480px;
     position: relative;
     border: 1px solid var(--border-gold);
-    padding: 15px;
+    padding: 12px;
     background: var(--bg-card-dark);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
   }
   .story-photo-wrap img {
     width: 100%;
@@ -286,237 +283,256 @@
 
   .story-quote {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    font-size: clamp(1.1rem, 3.5vw, 1.7rem);
     font-style: italic;
     color: var(--gold-light);
     text-align: center;
     max-width: 650px;
-    margin: 4rem auto 0 auto;
+    margin: 3.5rem auto 0;
     line-height: 1.7;
   }
   .story-quote::before {
     content: '✦';
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: var(--gold-solid);
     display: block;
     margin-bottom: 1rem;
   }
 
-  /* Детали торжества */
-  #details { 
+  /* DETAILS */
+  #details {
     background: linear-gradient(to bottom, var(--bg-deep-black), var(--bg-card-dark), var(--bg-deep-black));
     max-width: 100%;
     border-top: 1px solid var(--border-dark);
     border-bottom: 1px solid var(--border-dark);
   }
-  #details > .inner { max-width: 950px; margin: 0 auto; padding: 0 2rem; }
+  #details > .inner {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 5rem 1.5rem;
+  }
 
-  .detail-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-    margin-top: 4rem;
-  }
-  .card {
-    background: #090c0a;
-    padding: 3.5rem 2.5rem;
-    text-align: center;
-    border: 1px solid var(--border-dark);
-    position: relative;
-    border-top: 3px solid var(--gold-solid);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-  }
-  .card:hover {
-    transform: translateY(-8px);
-    border-top-color: var(--text-white);
-  }
-  .card-icon { 
-    font-size: 2rem; 
-    margin-bottom: 1.2rem; 
-    background: var(--gold-linear);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .card-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.6rem;
-    color: var(--text-white);
-    margin-bottom: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
-  .card-text { 
-    font-size: 0.9rem; 
-    color: var(--text-dim); 
-    line-height: 1.7; 
-  }
-  .card-text a { color: var(--gold-solid); text-decoration: none; }
-  .card-text a:hover { text-decoration: underline; }
-
-  /* Таймлайн программы */
+  /* TIMELINE */
   #program { background: var(--bg-deep-black); }
-  .timeline { margin-top: 5rem; position: relative; max-width: 650px; margin-left: auto; margin-right: auto; }
-  
+
+  .timeline {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .timeline::before {
     content: '';
     position: absolute;
-    left: 50%; top: 0; bottom: 0; width: 1px;
+    left: 5.5rem;
+    top: 0; bottom: 0;
+    width: 1px;
     background: var(--border-gold);
   }
+
   .tl-item {
-    display: flex; margin-bottom: 4rem; position: relative;
-    justify-content: space-between; align-items: center;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 0 0 3rem 0;
+    position: relative;
   }
-  .tl-spatial { width: 45%; }
-  .tl-spatial.right-side { text-align: left; }
-  .tl-spatial.left-side { text-align: right; }
-  
-  .tl-dot {
-    width: 12px; height: 12px; border-radius: 50%;
-    background: var(--gold-solid);
-    position: absolute; left: 50%; transform: translateX(-50%); z-index: 1;
-    box-shadow: 0 0 0 8px var(--bg-deep-black), 0 0 15px var(--gold-solid);
+  .tl-item:last-child { padding-bottom: 0; }
+
+  .tl-time-col {
+    width: 5rem;
+    flex-shrink: 0;
+    text-align: right;
   }
   .tl-time {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: var(--gold-solid);
     font-weight: 500;
-    margin-bottom: 0.3rem;
+    line-height: 1;
   }
+
+  .tl-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--gold-solid);
+    flex-shrink: 0;
+    margin-top: 0.35rem;
+    box-shadow: 0 0 0 6px var(--bg-deep-black), 0 0 12px var(--gold-solid);
+    position: relative;
+    z-index: 1;
+  }
+
+  .tl-content { flex: 1; }
   .tl-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: var(--text-white);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    margin-bottom: 0.4rem;
+    line-height: 1.2;
   }
-  .tl-desc { font-size: 0.9rem; color: var(--text-dim); margin-top: 0.5rem; line-height: 1.6; }
+  .tl-desc {
+    font-size: 0.88rem;
+    color: var(--text-dim);
+    line-height: 1.65;
+  }
 
-  /* Дресс-код */
-  #dresscode { 
-    background: linear-gradient(135deg, #05180f 0%, #0a2f1d 50%, #05180f 100%);
-    max-width: 100%; 
-    border-top: 1px solid var(--border-gold);
-    border-bottom: 1px solid var(--border-gold);
-  }
-  #dresscode > .inner { max-width: 950px; margin: 0 auto; padding: 0 2rem; }
-  #dresscode p.lead { color: #d1dfd7; }
-  
-  .palette { 
-    display: flex; gap: 1.5rem; margin: 4rem 0; flex-wrap: wrap; justify-content: center;
-  }
-  .swatch {
-    width: 70px; height: 70px;
-    border-radius: 50%;
-    border: 2px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-  .swatch:hover { transform: scale(1.15) rotate(10deg); }
-
-  /* Карта и Место проведения */
+  /* LOCATION */
   #location { background: var(--bg-deep-black); }
+
   .ymap-wrap {
-    width: 100%; height: 380px; overflow: hidden; margin: 3rem 0;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    margin: 2.5rem 0;
     border: 1px solid var(--border-gold);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
   }
-  .ymap-wrap iframe { width: 100%; height: 100%; border: 0; display: block; filter: invert(90%) hue-rotate(180deg) contrast(120%); opacity: 0.85; }
+  .ymap-wrap iframe {
+    width: 100%; height: 100%;
+    border: 0; display: block;
+    filter: invert(90%) hue-rotate(180deg) contrast(120%);
+    opacity: 0.85;
+  }
 
   .address-block {
     background: var(--bg-card-dark);
-    padding: 2.5rem; text-align: center; font-size: 1rem; line-height: 1.8;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    font-size: 0.95rem;
+    line-height: 1.8;
     border: 1px solid var(--border-dark);
     border-left: 4px solid var(--gold-solid);
   }
-  .address-block a { color: var(--gold-solid); text-decoration: none; font-weight: 400; }
+  .address-block a { color: var(--gold-solid); text-decoration: none; }
   .address-block a:hover { text-decoration: underline; }
 
-  /* RSVP Форма Ответа */
+  /* RSVP */
   #rsvp { text-align: center; background: var(--bg-deep-black); }
-  
-  .rsvp-btn {
-    display: inline-block;
-    padding: 1.2rem 3.5rem;
-    background: var(--gold-linear);
-    color: #000000;
-    font-weight: 500;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 0.25em;
-    text-decoration: none;
-    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
-    transition: all 0.3s ease;
-    margin-top: 1.5rem;
-  }
-  .rsvp-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.5);
-    filter: brightness(1.1);
+
+  .rsvp-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+    margin: 2.5rem auto 0;
+    max-width: 480px;
   }
 
-  /* Подарки */
+  .rsvp-contact-card {
+    width: 100%;
+    background: var(--bg-card-dark);
+    border: 1px solid var(--border-dark);
+    border-left: 4px solid var(--gold-solid);
+    padding: 1.5rem 2rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .rsvp-contact-icon {
+    font-size: 1.4rem;
+    background: var(--gold-linear);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    flex-shrink: 0;
+  }
+
+  .rsvp-contact-body {}
+
+  .rsvp-contact-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: var(--text-white);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.3rem;
+  }
+
+  .rsvp-contact-detail {
+    font-size: 0.88rem;
+    color: var(--text-dim);
+    line-height: 1.6;
+  }
+
+  .rsvp-contact-detail a {
+    color: var(--gold-solid);
+    text-decoration: none;
+  }
+  .rsvp-contact-detail a:hover { text-decoration: underline; }
+
+  .rsvp-deadline {
+    margin-top: 2.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--gold-light);
+    letter-spacing: 0.05em;
+  }
+
+  /* GIFTS */
   #gifts { background: var(--bg-deep-black); text-align: center; }
   .gift-note {
     font-family: 'Cormorant Garamond', serif;
-    font-style: italic; font-size: 1.6rem; color: var(--gold-solid); margin-top: 2rem;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--gold-solid);
+    margin-top: 2rem;
   }
 
-  /* Подвал сайта */
+  /* FOOTER */
   footer {
     background: #040605;
     color: var(--text-dim);
-    text-align: center; padding: 5rem 2rem;
-    font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; letter-spacing: 0.05em;
+    text-align: center;
+    padding: 4rem 1.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.3rem, 5vw, 1.8rem);
+    letter-spacing: 0.05em;
     border-top: 1px solid var(--border-dark);
   }
-  footer .footer-sep { color: var(--gold-solid); margin-bottom: 2rem; font-size: 1.5rem; }
-  footer p { 
-    margin-top: 2rem; font-family: 'Jost', sans-serif; font-size: 0.75rem; 
-    letter-spacing: 0.2em; color: rgba(255, 255, 255, 0.3); text-transform: uppercase;
+  footer .footer-sep {
+    color: var(--gold-solid);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+  }
+  footer p {
+    margin-top: 1.5rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    color: rgba(255, 255, 255, 0.25);
+    text-transform: uppercase;
   }
 
-  /* Эффекты проявления при прокрутке */
+  /* REVEAL */
   .reveal {
-    opacity: 0; transform: translateY(30px);
-    transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1), transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.9s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.9s cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   .reveal.visible { opacity: 1; transform: translateY(0); }
-
-  /* Адаптивность под смартфоны */
-  @media (max-width: 768px) {
-    .detail-cards { grid-template-columns: 1fr; gap: 2rem; }
-    nav { gap: 0.8rem; padding: 1rem 0.5rem; }
-    nav a { font-size: 0.65rem; letter-spacing: 0.1em; }
-    .hero-frame { top: 15px; bottom: 15px; left: 15px; right: 15px; }
-    .countdown-grid { gap: 0.6rem; }
-    .cd-unit { padding: 1rem; width: 75px; }
-    .cd-sep { font-size: 1.5rem; }
-    
-    .timeline::before { left: 20px; }
-    .tl-item { flex-direction: column; align-items: flex-start; padding-left: 45px; }
-    .tl-spatial { width: 100%; text-align: left !important; }
-    .tl-dot { left: 20px; transform: translateX(-50%); top: 10px; }
-  }
 </style>
 </head>
 <body>
 
-<!-- КОНТЕЙНЕР ДЛЯ ЗЕЛЕНОГО И ЗОЛОТОГО КОНФЕТТИ -->
 <div id="confetti-container"></div>
 
 <nav id="nav">
   <a href="#story">История</a>
   <a href="#details">Детали</a>
   <a href="#program">Программа</a>
-  <a href="#dresscode">Дресс-код</a>
   <a href="#location">Локация</a>
   <a href="#rsvp">RSVP</a>
 </nav>
 
-<!-- HERO BLOCK -->
 <section id="hero">
   <div class="hero-frame"></div>
   <div class="hero-tag">Приглашение на торжество</div>
@@ -530,7 +546,6 @@
   <div class="scroll-hint">Прокрутите вниз</div>
 </section>
 
-<!-- COUNTDOWN -->
 <div id="countdown">
   <div class="countdown-label">До главного праздника года осталось</div>
   <div class="countdown-grid">
@@ -544,107 +559,63 @@
   </div>
 </div>
 
-<!-- STORY / PHOTO -->
 <section id="story">
   <div class="section-tag">Свадебное торжество</div>
   <h2>Наша история</h2>
-
   <div class="story-photo-wrap reveal">
-    <!-- Путь изменен на относительный локальный файл в той же папке -->
     <img src="photo.jpg" alt="Артём и Елена">
   </div>
-
   <div class="story-quote reveal">
     «Один день, который останется в памяти на всю жизнь. Мы счастливы пригласить самых близких людей стать свидетелями начала нашей новой главы.»
   </div>
 </section>
 
-<!-- DETAILS -->
 <section id="details">
   <div class="inner">
     <div class="section-tag">Организация</div>
     <h2>Детали праздника</h2>
-    <p class="lead">Мы постарались предусмотреть всё, чтобы ваше пребывание на нашем событии было максимально комфортным и радостным.</p>
-    
-    <div class="detail-cards">
-      <div class="card reveal">
-        <div class="card-icon">✦</div>
-        <div class="card-title">Трансфер</div>
-        <div class="card-text">Для всех гостей будет организован комфортабельный трансфер к месту проведения церемонии и обратно по завершении программы праздника.</div>
-      </div>
-      <div class="card reveal">
-        <div class="card-icon">✦</div>
-        <div class="card-title">Официальный Хэштег</div>
-        <div class="card-text">Выкладывайте ваши яркие праздничные фото и видео в социальные сети с нашим общим хэштегом: <a href="#">#artem_elena_wedding</a></div>
-      </div>
-    </div>
+    <p class="lead">Мы постарались предусмотреть все ключевые моменты, чтобы ваше пребывание на нашем событии было максимально комфортным, легким и радостным.</p>
   </div>
 </section>
 
-<!-- TIMELINE / PROGRAM -->
 <section id="program">
   <div class="section-tag">События</div>
   <h2>Программа дня</h2>
-  
+
   <div class="timeline">
     <div class="tl-item reveal">
-      <div class="tl-spatial left-side">
-        <div class="tl-time">16:00</div>
+      <div class="tl-time-col"><div class="tl-time">16:00</div></div>
+      <div class="tl-dot"></div>
+      <div class="tl-content">
         <div class="tl-title">Сбор гостей & Welcome</div>
         <div class="tl-desc">Приветственные напитки, легкие изысканные закуски под звуки живой музыки.</div>
       </div>
-      <div class="tl-dot"></div>
-      <div class="tl-spatial right-side"></div>
     </div>
-    
     <div class="tl-item reveal">
-      <div class="tl-spatial left-side"></div>
+      <div class="tl-time-col"><div class="tl-time">17:00</div></div>
       <div class="tl-dot"></div>
-      <div class="tl-spatial right-side">
-        <div class="tl-time">17:00</div>
+      <div class="tl-content">
         <div class="tl-title">Выездная регистрация</div>
         <div class="tl-desc">Торжественная церемония под открытым небом, клятвы и самые искренние эмоции.</div>
       </div>
     </div>
-    
     <div class="tl-item reveal">
-      <div class="tl-spatial left-side">
-        <div class="tl-time">18:00</div>
+      <div class="tl-time-col"><div class="tl-time">18:00</div></div>
+      <div class="tl-dot"></div>
+      <div class="tl-content">
         <div class="tl-title">Свадебный банкет</div>
         <div class="tl-desc">Праздничный ужин, шоу-программа, танцы и множество приятных сюрпризов.</div>
       </div>
-      <div class="tl-dot"></div>
-      <div class="tl-spatial right-side"></div>
     </div>
   </div>
 </section>
 
-<!-- DRESSCODE -->
-<section id="dresscode">
-  <div class="inner">
-    <div class="section-tag">Дресс-код мероприятия</div>
-    <h2>Стиль одежды</h2>
-    <p class="lead">Мы будем признательны, если вы поддержите праздничную концепцию нашей свадьбы и выберете наряды в тонах вечера — <strong>черном, благородном изумрудно-зеленом или с элементами золота</strong>:</p>
-    
-    <div class="palette reveal">
-      <div class="swatch" style="background: #000000; border-color: var(--gold-solid);" title="Бархатный черный"></div>
-      <div class="swatch" style="background: #0a2f1d; border-color: var(--gold-solid);" title="Праздничный изумруд"></div>
-      <div class="swatch" style="background: #154c32;" title="Темно-зеленый"></div>
-      <div class="swatch" style="background: #bf953f;" title="Классическое золото"></div>
-      <div class="swatch" style="background: #fdfcf9; border-color: #0a2f1d;" title="Жемчужный белый"></div>
-    </div>
-  </div>
-</section>
-
-<!-- LOCATION -->
 <section id="location">
   <div class="section-tag">Локация</div>
   <h2>Место проведения</h2>
-  
   <div class="ymap-wrap reveal">
     <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A670a466c42a2f89f257bf8546b142468f766e077a2846d0a7a3b3fb34e1cba56&amp;source=constructor" width="100%" height="400"></iframe>
   </div>
-  
   <div class="address-block reveal">
     <strong>Загородная резиденция «Лесное Поместье»</strong><br>
     Элитный зал торжеств, ул. Лесная, д. 24<br>
@@ -652,23 +623,45 @@
   </div>
 </section>
 
-<!-- RSVP -->
 <section id="rsvp">
   <div class="section-tag">RSVP</div>
   <h2>Подтверждение присутствия</h2>
-  <p class="lead">Для нас очень важно разделить этот день с вами. Пожалуйста, ответьте на приглашение и подтвердите свое участие до 01 июля 2026 года.</p>
-  <a href="#" class="rsvp-btn reveal">Подтвердить присутствие</a>
+  <p class="lead">Для нас очень важно разделить этот день с вами. Свяжитесь с нами любым удобным способом, чтобы подтвердить своё участие.</p>
+
+  <div class="rsvp-contacts">
+    <div class="rsvp-contact-card reveal">
+      <div class="rsvp-contact-icon">✦</div>
+      <div class="rsvp-contact-body">
+        <div class="rsvp-contact-name">Елена</div>
+        <div class="rsvp-contact-detail">
+          <a href="tel:89155963361">8 (915) 596-33-61</a><br>
+          <a href="mailto:schuvalova.len@yandex.ru">schuvalova.len@yandex.ru</a>
+        </div>
+      </div>
+    </div>
+    <div class="rsvp-contact-card reveal">
+      <div class="rsvp-contact-icon">✦</div>
+      <div class="rsvp-contact-body">
+        <div class="rsvp-contact-name">Артём</div>
+        <div class="rsvp-contact-detail">
+          <a href="tel:89109041476">8 (910) 904-14-76</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rsvp-deadline reveal">
+    Пожалуйста, подтвердите присутствие до 10 июля 2026 года
+  </div>
 </section>
 
-<!-- GIFTS -->
 <section id="gifts">
   <div class="section-tag">Пожелания по подаркам</div>
   <h2>Приятные знаки внимания</h2>
-  <p class="lead">Не утруждайте себя выбором цветов и тяжелых подарков — мы будем искренне рады вашим улыбкам и вкладу в бюджет нашей молодой семьи в элегантных конвертах.</p>
+  <p class="lead">Не утруждайте себя выбором цветов и тяжёлых подарков — мы будем искренне рады вашим улыбкам и вкладу в бюджет нашей молодой семьи в элегантных конвертах.</p>
   <div class="gift-note reveal">С любовью, Артём и Елена</div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-sep">✦   ✦   ✦</div>
   До встречи на нашем празднике!
@@ -676,61 +669,34 @@
 </footer>
 
 <script>
-  // ГЕНЕРАЦИЯ ИЗУМРУДНОГО И ЗОЛОТОГО КОНФЕТТИ
   const confettiContainer = document.getElementById('confetti-container');
-  const colors = [
-    '#0a2f1d', '#154c32', '#1b6643', // Оттенки праздничного зеленого
-    '#d4af37', '#f3e5ab', '#aa771c', // Оттенки благородного золота
-    '#ffffff'
-  ];
+  const colors = ['#0a2f1d','#154c32','#1b6643','#d4af37','#f3e5ab','#aa771c','#ffffff'];
 
   function createConfettiPiece() {
-    const confetti = document.createElement('div');
-    confetti.classList.add('confetti');
-    
-    // Случайный размер, цвет и позиция
-    const size = Math.random() * 7 + 5; // от 5px до 12px
-    confetti.style.width = `${size}px`;
-    confetti.style.height = `${size * (Math.random() * 0.5 + 0.8)}px`;
-    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-    confetti.style.left = `${Math.random() * 100}vw`;
-    
-    // Параметры анимации падения
-    const duration = Math.random() * 4 + 5; // Скорость падения от 5 до 9 секунд
-    confetti.style.animationDuration = `${duration}s`;
-    confetti.style.animationDelay = `${Math.random() * 5}s`;
-    
-    confettiContainer.appendChild(confetti);
-
-    // Удаляем элемент после завершения падения
-    setTimeout(() => {
-      confetti.remove();
-    }, (duration + 5) * 1000);
+    const el = document.createElement('div');
+    el.classList.add('confetti');
+    const size = Math.random() * 7 + 5;
+    el.style.width = size + 'px';
+    el.style.height = (size * (Math.random() * 0.5 + 0.8)) + 'px';
+    el.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+    el.style.left = (Math.random() * 100) + 'vw';
+    const dur = Math.random() * 4 + 5;
+    el.style.animationDuration = dur + 's';
+    el.style.animationDelay = (Math.random() * 5) + 's';
+    confettiContainer.appendChild(el);
+    setTimeout(() => el.remove(), (dur + 5) * 1000);
   }
-
-  // Создаем начальный массив конфетти и генерируем новые в процессе
-  for(let i = 0; i < 80; i++) {
-    createConfettiPiece();
-  }
+  for (let i = 0; i < 80; i++) createConfettiPiece();
   setInterval(createConfettiPiece, 150);
 
-  // Логика отображения фиксированного меню
   window.addEventListener('scroll', () => {
-    const nav = document.getElementById('nav');
-    if (window.scrollY > window.innerHeight * 0.2) {
-      nav.classList.add('visible');
-    } else {
-      nav.classList.remove('visible');
-    }
+    document.getElementById('nav').classList.toggle('visible', window.scrollY > window.innerHeight * 0.2);
   });
 
-  // Логика проявления элементов при скролле
   const reveals = document.querySelectorAll('.reveal');
   const revealOnScroll = () => {
     reveals.forEach(el => {
-      const windowHeight = window.innerHeight;
-      const elementTop = el.getBoundingClientRect().top;
-      if (elementTop < windowHeight - 40) {
+      if (el.getBoundingClientRect().top < window.innerHeight - 40) {
         el.classList.add('visible');
       }
     });
@@ -738,21 +704,18 @@
   window.addEventListener('scroll', revealOnScroll);
   window.addEventListener('load', revealOnScroll);
 
-  // Интерактивный таймер до 08.08.2026
   const targetDate = new Date('August 8, 2026 16:00:00').getTime();
   function updateTimer() {
-    const now = new Date().getTime();
-    const diff = targetDate - now;
+    const diff = targetDate - Date.now();
     if (diff > 0) {
-      document.getElementById('cd-d').innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
-      document.getElementById('cd-h').innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      document.getElementById('cd-m').innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      document.getElementById('cd-s').innerText = Math.floor((diff % (1000 * 60)) / 1000);
+      document.getElementById('cd-d').innerText = Math.floor(diff / 86400000);
+      document.getElementById('cd-h').innerText = Math.floor((diff % 86400000) / 3600000);
+      document.getElementById('cd-m').innerText = Math.floor((diff % 3600000) / 60000);
+      document.getElementById('cd-s').innerText = Math.floor((diff % 60000) / 1000);
     }
   }
   setInterval(updateTimer, 1000);
   updateTimer();
 </script>
-
 </body>
 </html>
