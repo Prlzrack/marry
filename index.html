@@ -18,10 +18,10 @@
     --border-gold: rgba(212, 175, 55, 0.4);
     --border-dark: rgba(255, 255, 255, 0.07);
   }
-
+ 
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-
+ 
   body {
     background: var(--bg-deep-black);
     color: var(--text-white);
@@ -30,7 +30,7 @@
     overflow-x: hidden;
     line-height: 1.6;
   }
-
+ 
   #confetti-container {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -51,7 +51,7 @@
     90% { opacity: 0.8; }
     100% { transform: translateY(105vh) rotate(720deg); opacity: 0; }
   }
-
+ 
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -78,7 +78,7 @@
     white-space: nowrap;
   }
   nav a:hover { color: var(--gold-solid); }
-
+ 
   /* HERO */
   #hero {
     min-height: 100vh;
@@ -91,7 +91,7 @@
     position: relative;
     background: radial-gradient(circle at center, var(--emerald-green) 0%, var(--bg-deep-black) 70%);
   }
-
+ 
   .hero-frame {
     position: absolute;
     top: 20px; bottom: 20px; left: 20px; right: 20px;
@@ -104,7 +104,7 @@
     top: 8px; bottom: 8px; left: 8px; right: 8px;
     border: 1px solid rgba(255,255,255,0.04);
   }
-
+ 
   .hero-tag {
     font-size: 0.75rem;
     letter-spacing: 0.35em;
@@ -113,7 +113,7 @@
     margin-bottom: 1.8rem;
     font-weight: 400;
   }
-
+ 
   h1.names {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(3rem, 12vw, 6.5rem);
@@ -126,7 +126,7 @@
     -webkit-text-fill-color: transparent;
     color: var(--gold-solid);
   }
-
+ 
   .ampersand {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
@@ -136,7 +136,7 @@
     -webkit-text-fill-color: initial;
     color: var(--text-white);
   }
-
+ 
   .hero-date {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(1.3rem, 5vw, 2.2rem);
@@ -148,7 +148,7 @@
     padding: 0.4rem 1.5rem;
     display: inline-block;
   }
-
+ 
   .hero-sub {
     font-size: 0.95rem;
     letter-spacing: 0.12em;
@@ -157,7 +157,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
   }
-
+ 
   .scroll-hint {
     position: absolute;
     bottom: 3.5rem;
@@ -171,7 +171,7 @@
     0%, 100% { opacity: 0.5; }
     50% { opacity: 1; }
   }
-
+ 
   /* COUNTDOWN */
   #countdown {
     background: var(--bg-deep-black);
@@ -224,7 +224,7 @@
     color: var(--gold-solid);
     flex-shrink: 0;
   }
-
+ 
   /* SECTIONS */
   section {
     padding: 5rem 1.5rem;
@@ -232,7 +232,7 @@
     margin: 0 auto;
     position: relative;
   }
-
+ 
   .section-tag {
     font-size: 0.7rem;
     letter-spacing: 0.35em;
@@ -242,7 +242,7 @@
     text-align: center;
     display: block;
   }
-
+ 
   h2 {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(2rem, 7vw, 3.5rem);
@@ -253,7 +253,7 @@
     text-transform: uppercase;
     letter-spacing: 0.08em;
   }
-
+ 
   p.lead {
     font-size: 0.95rem;
     line-height: 1.85;
@@ -262,10 +262,10 @@
     max-width: 680px;
     margin: 0 auto 3rem auto;
   }
-
+ 
   /* STORY */
   #story { background: var(--bg-deep-black); }
-
+ 
   .story-photo-wrap {
     margin: 2.5rem auto;
     max-width: 480px;
@@ -280,7 +280,7 @@
     display: block;
     object-fit: cover;
   }
-
+ 
   .story-quote {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(1.1rem, 3.5vw, 1.7rem);
@@ -298,7 +298,7 @@
     display: block;
     margin-bottom: 1rem;
   }
-
+ 
   /* DETAILS */
   #details {
     background: linear-gradient(to bottom, var(--bg-deep-black), var(--bg-card-dark), var(--bg-deep-black));
@@ -311,10 +311,10 @@
     margin: 0 auto;
     padding: 5rem 1.5rem;
   }
-
+ 
   /* TIMELINE */
   #program { background: var(--bg-deep-black); }
-
+ 
   .timeline {
     margin-top: 4rem;
     display: flex;
@@ -333,7 +333,7 @@
     width: 1px;
     background: var(--border-gold);
   }
-
+ 
   .tl-item {
     display: flex;
     align-items: flex-start;
@@ -342,7 +342,7 @@
     position: relative;
   }
   .tl-item:last-child { padding-bottom: 0; }
-
+ 
   .tl-time-col {
     width: 5rem;
     flex-shrink: 0;
@@ -355,7 +355,7 @@
     font-weight: 500;
     line-height: 1;
   }
-
+ 
   .tl-dot {
     width: 10px;
     height: 10px;
@@ -367,7 +367,7 @@
     position: relative;
     z-index: 1;
   }
-
+ 
   .tl-content { flex: 1; }
   .tl-title {
     font-family: 'Cormorant Garamond', serif;
@@ -383,10 +383,10 @@
     color: var(--text-dim);
     line-height: 1.65;
   }
-
+ 
   /* LOCATION */
   #location { background: var(--bg-deep-black); }
-
+ 
   .ymap-wrap {
     width: 100%;
     height: 300px;
@@ -400,7 +400,7 @@
     filter: invert(90%) hue-rotate(180deg) contrast(120%);
     opacity: 0.85;
   }
-
+ 
   .address-block {
     background: var(--bg-card-dark);
     padding: 2rem 1.5rem;
@@ -412,10 +412,10 @@
   }
   .address-block a { color: var(--gold-solid); text-decoration: none; }
   .address-block a:hover { text-decoration: underline; }
-
+ 
   /* RSVP */
   #rsvp { text-align: center; background: var(--bg-deep-black); }
-
+ 
   .rsvp-contacts {
     display: flex;
     flex-direction: column;
@@ -424,7 +424,7 @@
     margin: 2.5rem auto 0;
     max-width: 480px;
   }
-
+ 
   .rsvp-contact-card {
     width: 100%;
     background: var(--bg-card-dark);
@@ -436,7 +436,7 @@
     align-items: center;
     gap: 1.2rem;
   }
-
+ 
   .rsvp-contact-icon {
     font-size: 1.4rem;
     background: var(--gold-linear);
@@ -444,9 +444,9 @@
     -webkit-text-fill-color: transparent;
     flex-shrink: 0;
   }
-
+ 
   .rsvp-contact-body {}
-
+ 
   .rsvp-contact-name {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.2rem;
@@ -455,19 +455,19 @@
     letter-spacing: 0.08em;
     margin-bottom: 0.3rem;
   }
-
+ 
   .rsvp-contact-detail {
     font-size: 0.88rem;
     color: var(--text-dim);
     line-height: 1.6;
   }
-
+ 
   .rsvp-contact-detail a {
     color: var(--gold-solid);
     text-decoration: none;
   }
   .rsvp-contact-detail a:hover { text-decoration: underline; }
-
+ 
   .rsvp-deadline {
     margin-top: 2.5rem;
     font-family: 'Cormorant Garamond', serif;
@@ -476,7 +476,167 @@
     color: var(--gold-light);
     letter-spacing: 0.05em;
   }
-
+ 
+  /* ─── RSVP FORM ─── */
+  .rsvp-form-wrap {
+    margin: 3rem auto 0;
+    max-width: 480px;
+    background: var(--bg-card-dark);
+    border: 1px solid var(--border-gold);
+    padding: 2.5rem 2rem;
+    position: relative;
+  }
+  .rsvp-form-wrap::before {
+    content: '';
+    position: absolute;
+    top: 6px; bottom: 6px; left: 6px; right: 6px;
+    border: 1px solid rgba(255,255,255,0.04);
+    pointer-events: none;
+  }
+ 
+  .rsvp-form-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    color: var(--text-white);
+    text-align: center;
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.06em;
+  }
+  .rsvp-form-sub {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    text-align: center;
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+  }
+ 
+  .rsvp-field {
+    margin-bottom: 1.4rem;
+  }
+  .rsvp-field label {
+    display: block;
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold-solid);
+    margin-bottom: 0.5rem;
+  }
+  .rsvp-field input[type="text"] {
+    width: 100%;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border-gold);
+    border-radius: 0;
+    color: var(--text-white);
+    font-family: 'Jost', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 300;
+    padding: 0.75rem 1rem;
+    outline: none;
+    transition: border-color 0.3s, background 0.3s;
+    -webkit-appearance: none;
+  }
+  .rsvp-field input[type="text"]:focus {
+    border-color: var(--gold-solid);
+    background: rgba(212, 175, 55, 0.06);
+  }
+  .rsvp-field input[type="text"]::placeholder {
+    color: rgba(178,196,187,0.4);
+  }
+ 
+  /* Toggle buttons */
+  .rsvp-toggle {
+    display: flex;
+    gap: 0;
+    margin-bottom: 1.8rem;
+    border: 1px solid var(--border-gold);
+  }
+  .rsvp-toggle input[type="radio"] { display: none; }
+  .rsvp-toggle label {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.25s, color 0.25s;
+    color: var(--text-dim);
+    border: none;
+    user-select: none;
+    margin: 0;
+  }
+  .rsvp-toggle label:first-of-type {
+    border-right: 1px solid var(--border-gold);
+  }
+ 
+  /* YES — green tint */
+  #att-yes:checked ~ label[for="att-yes"],
+  .rsvp-toggle input#att-yes:checked + label {
+    background: rgba(34, 139, 34, 0.25);
+    color: #6fcf97;
+  }
+  /* NO — red tint */
+  #att-no:checked ~ label[for="att-no"],
+  .rsvp-toggle input#att-no:checked + label {
+    background: rgba(180, 30, 30, 0.28);
+    color: #eb5757;
+  }
+ 
+  /* workaround: sibling trick */
+  #att-yes:checked + label { background: rgba(34,139,34,0.25); color: #6fcf97; }
+  #att-no:checked + label  { background: rgba(180,30,30,0.28); color: #eb5757; }
+ 
+  .rsvp-submit {
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--gold-solid);
+    color: var(--gold-solid);
+    font-family: 'Jost', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    padding: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, transform 0.15s;
+    position: relative;
+    overflow: hidden;
+  }
+  .rsvp-submit::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gold-linear);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .rsvp-submit:hover::before { opacity: 1; }
+  .rsvp-submit:hover { color: #070908; }
+  .rsvp-submit span { position: relative; z-index: 1; }
+  .rsvp-submit:active { transform: scale(0.98); }
+  .rsvp-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+ 
+  /* Status messages */
+  .rsvp-status {
+    margin-top: 1.2rem;
+    padding: 0.9rem 1rem;
+    font-size: 0.85rem;
+    text-align: center;
+    letter-spacing: 0.08em;
+    display: none;
+  }
+  .rsvp-status.success {
+    display: block;
+    background: rgba(34,139,34,0.15);
+    border: 1px solid rgba(111,207,151,0.4);
+    color: #6fcf97;
+  }
+  .rsvp-status.error {
+    display: block;
+    background: rgba(180,30,30,0.15);
+    border: 1px solid rgba(235,87,87,0.4);
+    color: #eb5757;
+  }
+ 
   /* GIFTS */
   #gifts { background: var(--bg-deep-black); text-align: center; }
   .gift-note {
@@ -486,7 +646,7 @@
     color: var(--gold-solid);
     margin-top: 2rem;
   }
-
+ 
   /* FOOTER */
   footer {
     background: #040605;
@@ -511,7 +671,7 @@
     color: rgba(255, 255, 255, 0.25);
     text-transform: uppercase;
   }
-
+ 
   /* REVEAL */
   .reveal {
     opacity: 0;
@@ -522,9 +682,9 @@
 </style>
 </head>
 <body>
-
+ 
 <div id="confetti-container"></div>
-
+ 
 <nav id="nav">
   <a href="#story">История</a>
   <a href="#details">Детали</a>
@@ -532,7 +692,7 @@
   <a href="#location">Локация</a>
   <a href="#rsvp">RSVP</a>
 </nav>
-
+ 
 <section id="hero">
   <div class="hero-frame"></div>
   <div class="hero-tag">Приглашение на торжество</div>
@@ -545,7 +705,7 @@
   <p class="hero-sub">Разделите с нами этот волшебный день</p>
   <div class="scroll-hint">Прокрутите вниз</div>
 </section>
-
+ 
 <div id="countdown">
   <div class="countdown-label">До главного праздника года осталось</div>
   <div class="countdown-grid">
@@ -558,7 +718,7 @@
     <div class="cd-unit"><span class="cd-num" id="cd-s">—</span><span class="cd-lbl">секунд</span></div>
   </div>
 </div>
-
+ 
 <section id="story">
   <div class="section-tag">Свадебное торжество</div>
   <h2>Наша история</h2>
@@ -569,7 +729,7 @@
     «Один день, который останется в памяти на всю жизнь. Мы счастливы пригласить самых близких людей стать свидетелями начала нашей новой главы.»
   </div>
 </section>
-
+ 
 <section id="details">
   <div class="inner">
     <div class="section-tag">Организация</div>
@@ -577,11 +737,11 @@
     <p class="lead">Мы постарались предусмотреть все ключевые моменты, чтобы ваше пребывание на нашем событии было максимально комфортным, легким и радостным.</p>
   </div>
 </section>
-
+ 
 <section id="program">
   <div class="section-tag">События</div>
   <h2>Программа дня</h2>
-
+ 
   <div class="timeline">
     <div class="tl-item reveal">
       <div class="tl-time-col"><div class="tl-time">14:50</div></div>
@@ -617,7 +777,7 @@
     </div>
   </div>
 </section>
-
+ 
 <section id="location">
   <div class="section-tag">Локация</div>
   <h2>Место проведения</h2>
@@ -633,12 +793,13 @@
     <a href="https://yandex.ru/maps/?rtext=~54.950464,41.324542&rtt=auto" target="_blank">Построить маршрут на Яндекс.Картах →</a>
   </div>
 </section>
-
+ 
+<!-- ═══════════════════════════════════════════ RSVP ═══════════════════════════════════════════ -->
 <section id="rsvp">
   <div class="section-tag">RSVP</div>
   <h2>Подтверждение присутствия</h2>
-  <p class="lead">Для нас очень важно разделить этот день с вами. Свяжитесь с нами любым удобным способом, чтобы подтвердить своё участие.</p>
-
+ 
+ 
   <div class="rsvp-contacts">
     <div class="rsvp-contact-card reveal">
       <div class="rsvp-contact-icon">✦</div>
@@ -660,29 +821,62 @@
       </div>
     </div>
   </div>
-
+ 
+  <!-- ─── Форма подтверждения ─── -->
+  <div class="rsvp-form-wrap reveal">
+    <div class="rsvp-form-title">Заполните форму</div>
+ 
+ 
+    <div class="rsvp-field">
+      <label for="rsvp-last">Фамилия</label>
+      <input type="text" id="rsvp-last" placeholder="Иванов" autocomplete="family-name">
+    </div>
+ 
+    <div class="rsvp-field">
+      <label for="rsvp-first">Имя</label>
+      <input type="text" id="rsvp-first" placeholder="Иван" autocomplete="given-name">
+    </div>
+ 
+    <div class="rsvp-field">
+      <label>Присутствие</label>
+      <div class="rsvp-toggle" role="group" aria-label="Подтверждение присутствия">
+        <input type="radio" name="attendance" id="att-yes" value="yes">
+        <label for="att-yes">✓ Буду</label>
+        <input type="radio" name="attendance" id="att-no" value="no">
+        <label for="att-no">✕ Не буду</label>
+      </div>
+    </div>
+ 
+    <button class="rsvp-submit" id="rsvp-btn" onclick="submitRSVP()">
+      <span>Отправить подтверждение</span>
+    </button>
+ 
+    <div class="rsvp-status" id="rsvp-status"></div>
+  </div>
+  <!-- ─── /Форма ─── -->
+ 
   <div class="rsvp-deadline reveal">
     Пожалуйста, подтвердите присутствие до 10 июля 2026 года
   </div>
 </section>
-
+ 
 <section id="gifts">
   <div class="section-tag">Пожелания по подаркам</div>
   <h2>Приятные знаки внимания</h2>
   <p class="lead">Не утруждайте себя выбором цветов и тяжёлых подарков — мы будем искренне рады вашим улыбкам и вкладу в бюджет нашей молодой семьи в элегантных конвертах.</p>
   <div class="gift-note reveal">С любовью, Артём и Елена</div>
 </section>
-
+ 
 <footer>
   <div class="footer-sep">✦   ✦   ✦</div>
   До встречи на нашем празднике!
   <p>© 2026 Артём & Елена. Атмосфера любви и волшебства.</p>
 </footer>
-
+ 
 <script>
+  // ── Конфетти ──
   const confettiContainer = document.getElementById('confetti-container');
   const colors = ['#0a2f1d','#154c32','#1b6643','#d4af37','#f3e5ab','#aa771c','#ffffff'];
-
   function createConfettiPiece() {
     const el = document.createElement('div');
     el.classList.add('confetti');
@@ -699,23 +893,23 @@
   }
   for (let i = 0; i < 80; i++) createConfettiPiece();
   setInterval(createConfettiPiece, 150);
-
+ 
+  // ── Навигация ──
   window.addEventListener('scroll', () => {
     document.getElementById('nav').classList.toggle('visible', window.scrollY > window.innerHeight * 0.2);
   });
-
+ 
+  // ── Reveal ──
   const reveals = document.querySelectorAll('.reveal');
   const revealOnScroll = () => {
     reveals.forEach(el => {
-      if (el.getBoundingClientRect().top < window.innerHeight - 40) {
-        el.classList.add('visible');
-      }
+      if (el.getBoundingClientRect().top < window.innerHeight - 40) el.classList.add('visible');
     });
   };
   window.addEventListener('scroll', revealOnScroll);
   window.addEventListener('load', revealOnScroll);
-
-  // Сбор гостей 14:50 = 08.08.2026 14:50:00
+ 
+  // ── Таймер ──
   const targetDate = new Date('August 8, 2026 14:50:00').getTime();
   function updateTimer() {
     const diff = targetDate - Date.now();
@@ -728,6 +922,69 @@
   }
   setInterval(updateTimer, 1000);
   updateTimer();
+ 
+  // ══════════════════════════════════════════════════════════
+  //  RSVP → Google Sheets через Apps Script
+  //  ⚠️  Вставьте свой URL из Apps Script в переменную ниже
+  // ══════════════════════════════════════════════════════════
+  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw08YJOLIjLyir__9lCjh_ZOfMffYjcv78m0ieVR73vHtAsxcLJ57BZin2QU6aV1sMsww/exec';
+ 
+  async function submitRSVP() {
+    const lastName  = document.getElementById('rsvp-last').value.trim();
+    const firstName = document.getElementById('rsvp-first').value.trim();
+    const attending = document.querySelector('input[name="attendance"]:checked');
+    const btn    = document.getElementById('rsvp-btn');
+    const status = document.getElementById('rsvp-status');
+ 
+    // Валидация
+    status.className = 'rsvp-status';
+    status.style.display = 'none';
+ 
+    if (!lastName || !firstName) {
+      status.textContent = 'Пожалуйста, заполните фамилию и имя.';
+      status.className = 'rsvp-status error';
+      return;
+    }
+    if (!attending) {
+      status.textContent = 'Пожалуйста, выберите: буду или не буду.';
+      status.className = 'rsvp-status error';
+      return;
+    }
+ 
+    btn.disabled = true;
+    btn.querySelector('span').textContent = 'Отправляем...';
+ 
+    try {
+      const params = new URLSearchParams({
+        lastName,
+        firstName,
+        attendance: attending.value   // "yes" или "no"
+      });
+ 
+      // no-cors — Apps Script вернёт opaque response; для нас достаточно
+      await fetch(APPS_SCRIPT_URL + '?' + params.toString(), {
+        method: 'GET',
+        mode:   'no-cors'
+      });
+ 
+      status.textContent = attending.value === 'yes'
+        ? '🎉 Отлично! Ждём вас 8 августа!'
+        : 'Жаль, что не увидимся. Спасибо за ответ!';
+      status.className = 'rsvp-status success';
+ 
+      // Сброс формы
+      document.getElementById('rsvp-last').value  = '';
+      document.getElementById('rsvp-first').value = '';
+      document.querySelectorAll('input[name="attendance"]').forEach(r => r.checked = false);
+      btn.querySelector('span').textContent = 'Отправлено ✓';
+ 
+    } catch (err) {
+      status.textContent = 'Не удалось отправить. Попробуйте ещё раз или позвоните нам.';
+      status.className = 'rsvp-status error';
+      btn.disabled = false;
+      btn.querySelector('span').textContent = 'Отправить подтверждение';
+    }
+  }
 </script>
 </body>
 </html>
